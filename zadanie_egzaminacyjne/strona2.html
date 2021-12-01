@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POTĘGOWANIE</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="baner.png" alt="baner"></a>
+    </header>
+    <nav>
+        <a href="strona1.html">- proste działania</a>
+        <a href="strona2.html">- potęgowanie</a>
+    </nav>
+    <main>
+        <h1>POTĘGOWANIE</h1>
+    <form >
+        <i>Podaj podstawę potęgi:</i>
+        <input id="liczba1" type="number" name="liczba1" /><br/>
+        <i>Podaj dodatni, całkowity wykładnik potęgi:</i>
+        <input id="liczba2" type="number" name="liczba2" /><br/>
+        <input type="button" value="POTĘGOWANIE" name="oblicz" onclick="poteguj();"/>
+    </form>
+
+    <output id="wynik">...</output>
+
+<script>
+    function poteguj() {
+        const liczba1 = document.getElementById("liczba1").value;
+        const liczba2 = document.getElementById("liczba2").value;
+        let potega = document.getElementById("w");
+
+        if(liczba1 == 0) {
+            alert("Podstawa potęgi musi być różna od zera.");
+        } else if(liczba2 < 1) {
+            alert("Wykładnik potęgi musi być liczbą całkowitą większą od zera.");
+        } else {
+            potega = Math.pow(liczba1,liczba2);
+            wynik.value = potega;
+        }
+    }
+</script>
+    </main>
+</body>
+</html>
